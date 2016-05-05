@@ -1,0 +1,27 @@
+{
+    "name":         "alcalyn/serializer-doctrine-proxies",
+    "license":      "MIT",
+    "type":         "library",
+    "description":  "Provides Doctrine proxies handler for JMS Serializer to disable lazy-loading and recursion during serialization.",
+    "homepage":     "https://github.com/alcalyn/serializer-doctrine-proxies",
+    "keywords":     ["serializer", "doctrine"],
+    "authors": [
+        {
+            "name": "Julien Maulny",
+            "email": "doubjulien@hotmail.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5",
+        "jms/serializer": "~1.1",
+        "doctrine/common": "~2.4",
+        "doctrine/orm": "~2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alcalyn\\SerializerDoctrineProxies\\": "src/",
+            "Tests\\Alcalyn\\SerializerDoctrineProxies\\": "tests/"
+        }
+    }
+}
