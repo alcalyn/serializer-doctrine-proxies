@@ -61,7 +61,7 @@ class DoctrineProxySubscriber extends BaseDoctrineProxySubscriber
         }
 
         if (!$virtualType) {
-            if ($this->enableLazyLoading) {
+            if ($this->enableLazyLoading || $object->__isInitialized()) {
                 $event->setType(get_parent_class($object));
             } else {
                 $event->setType(SerializerProxyType::class, array(
